@@ -1,6 +1,10 @@
 package variance
 
-object ScalaVariance {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; def main(args: Array[String])=$execute{;$skip(85); 
+/**
+Based on http://oldfashionedsoftware.com/2008/08/26/variance-basics-in-java-and-scala/
+**/
+
+object ScalaVariance {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; def main(args: Array[String])=$execute{;$skip(181); 
 
   println("Welcome to the Scala worksheet")
   

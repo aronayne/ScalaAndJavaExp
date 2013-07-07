@@ -1,5 +1,9 @@
 package variance
 
+/**
+Based on http://oldfashionedsoftware.com/2008/08/26/variance-basics-in-java-and-scala/
+**/
+
 object ScalaVariance {
 
   println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
