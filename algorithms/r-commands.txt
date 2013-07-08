@@ -1,0 +1,278 @@
+cells = c(read.csv("c:\\data-files\\kmeans\\cells.csv", header = TRUE))
+rnames = c(read.csv("c:\\data-files\\kmeans\\rnames.csv", header = TRUE))
+cnames = c(read.csv("c:\\data-files\\kmeans\\cnames.csv", header = TRUE))
+
+x <- matrix(cells, nrow=4, ncol=3, byrow=TRUE, dimnames=list(rnames, cnames))
+
+# run K-Means
+km <- kmeans(x, 1, 15)
+
+# print components of km
+print(km)
+
+# plot clusters
+plot(x, col = km$cluster)
+# plot centers
+points(km$centers, col = 1:2, pch = 8)
+
+
+
+*********************************************************
+
+
+
+cells = c(read.csv("c:\\data-files\\kmeans\\cells.csv", header = FALSE))
+rnames = c(read.csv("c:\\data-files\\kmeans\\rnames.csv", header = FALSE))
+cnames = c(read.csv("c:\\data-files\\kmeans\\cnames.csv", header = FALSE))
+
+x <- matrix(cells, nrow=9, ncol=3, byrow=TRUE, dimnames=list(rnames, cnames))
+
+# run K-Means
+km <- kmeans(x, 3, 15)
+
+# print components of km
+print(km)
+
+# plot clusters
+plot(x, col = km$cluster)
+# plot centers
+points(km$centers, col = 1:2, pch = 8)
+****************************************************************************
+
+
+
+x <- read.csv("c:\\data-files\\kmeans\\data.txt", header=TRUE, row.names=1)
+# run K-Means
+km <- kmeans(x, 4, 15)
+ 
+# print components of km
+print(km)
+
+# plot clusters
+plot(x, col = km$cluster)
+# plot centers
+points(km$centers, col = 1:2, pch = 8)
+
+
+*********************************************************
+
+
+
+cells = c(1,1,1,0,1,0,
+          1,0,1,0,1,0,
+          1,0,1,0,1,0,
+          1,0,0,1,1,1,
+          1,1,1,1,1,1,
+          0,1,0,1,0,1,
+          0,1,0,1,0,1,
+          0,1,0,1,0,0,
+          1,1,1,1,1,1)
+rnames = c("a1","a2","a3","a4","a5","a6","a7","a8","a9")
+cnames = c("google","so","test","google1","so1","test1")
+
+x <- matrix(cells, nrow=9, ncol=6, byrow=TRUE, dimnames=list(rnames, cnames))
+
+# run K-Means
+km <- kmeans(x, 3, 15)
+
+# print components of km
+print(km)
+
+# plot clusters
+plot(x, col = km$cluster)
+# plot centers
+points(km$centers, col = 1:2, pch = 8)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cells = c(1,1,1,0,1,0,1,1,1,0,1,0,1,1,1,
+          1,0,1,0,1,0,1,1,0,0,1,0,0,1,0,
+          1,0,1,0,1,0,1,1,1,1,1,0,1,1,1,
+          1,0,0,1,1,1,1,0,1,0,1,0,0,1,0,
+          1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,
+          0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,
+          0,1,1,0,0,0,1,0,1,1,1,0,1,1,1,
+          0,1,0,1,1,0,1,1,1,0,1,0,0,1,0,
+          1,1,1,0,0,1,1,1,1,0,1,0,1,1,1)
+rnames = c("a1","a2","a3","a4","a5","a6","a7","a8","a9")
+cnames = c("google","so","test","google1","so1","test1",
+           "google2","so2","test2","google3","so3","test3","google4","so4","test4")
+
+x <- matrix(cells, nrow=9, ncol=15, byrow=TRUE, dimnames=list(rnames, cnames))
+# run K-Means
+km <- kmeans(x, 4, 1)
+# print components of km
+print(km)
+# plot clusters
+plot(x, col = km$cluster)
+# plot centers
+points(km$centers, col = 1:2, pch = 8)
+
+
+
+
+cells = c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,
+		  1,1,3,4,5,9,7,8,9,10,13,12,17,14,15,
+		  1,2,3,4,5,9,7,8,9,10,13,12,17,14,15
+)
+rnames = c("a1","a2","a3")
+cnames = c("google","so","test","google1","so1","test1",
+           "google2","so2","test2","google3","so3","test3","google4","so4","test4")
+
+x <- matrix(cells, nrow=2, ncol=15, byrow=TRUE, dimnames=list(rnames, cnames))
+# run K-Means
+km <- kmeans(x, 3, 5)
+# print components of km
+print(km)
+# plot clusters
+plot(x, col = km$cluster)
+# plot centers
+points(km$centers, col = 1:2, pch = 8)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cells = c(1,1,1,
+          1,0,1,
+          1,0,1,
+          1,0,0,
+          1,1,1,
+          0,1,0,
+          0,1,1,
+          1,1,0,
+          0,0,1,
+          0,0,0,
+          1,1,1,
+          1,1,0,
+          1,0,1,
+          1,1,0,
+          1,0,1,
+          1,1,0,
+          1,0,1,
+          1,1,0,
+          1,0,1,
+          1,1,0,
+          1,0,1,
+          1,1,0,
+          1,0,1,
+          1,1,0)
+rnames = c("a1","a2","a3","a4","a5","a6","a7","a8","a9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24")
+cnames = c("google","so","test")
+x <- matrix(cells, nrow=24, ncol=3, byrow=TRUE, dimnames=list(rnames, cnames))
+# run K-Means
+km <- kmeans(x, 8, 5)
+# print components of km
+print(km)
+# plot clusters
+plot(x, col = km$cluster)
+# plot centers
+points(km$centers, col = 1:2, pch = 8)
+
+
+
+
+
+
+x <- rbind(matrix(rnorm(100, sd = 0.3), ncol = 2),
+           matrix(rnorm(100, mean = 1, sd = 0.3), ncol = 2))
+colnames(x) <- c("x", "y")
+(cl <- kmeans(x, 2))
+plot(x, col = cl$cluster)
+points(cl$centers, col = 1:2, pch = 8, cex = 2)
+
+
+
+m <- matrix(c(1,1,1) , ncol=3)
+
+x <- rbind(matrix(c(1,0,1) , ncol=3),
+           matrix(c(1,1,1) , ncol=3),
+           matrix(c(1,1,0) , ncol=3),
+           matrix(c(0,1,1) , ncol=3),
+           matrix(c(0,0,1) , ncol=3),
+           matrix(c(0,0,0) , ncol=3),
+           matrix(c(1,1,1) , ncol=3),
+           matrix(c(1,1,1) , ncol=3),
+           matrix(c(1,1,0) , ncol=3),
+           matrix(c(1,0,0) , ncol=3),
+           matrix(c(0,0,1) , ncol=3),
+           matrix(c(0,0,0) , ncol=3),
+           matrix(c(0,0,1) , ncol=3),
+           matrix(c(0,1,1) , ncol=3),
+           matrix(c(1,0,1) , ncol=3),
+           matrix(c(0,1,0) , ncol=3))
+colnames(x) <- c("google", "stackoverflow", "tester")
+(cl <- kmeans(x, 3))
+plot(x, col = cl$cluster)
+points(cl$centers, col = 1:5, pch = 8, cex = 2)
+
+
