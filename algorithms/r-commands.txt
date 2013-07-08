@@ -235,7 +235,41 @@ km <- kmeans(x, 8, 5)
 print(km)
 # plot clusters
 plot(x, col = km$cluster)
+
+x.mat=x
+
+up.panelfun <- function(x,y,clust=cl$cluster,...){
+  # this plots the main pairs plot
+  sapply(unique(clust), function(c){ points(jitter(x[clust==c]),jitter(y[clust==c]), col=c)}) 
+}
+
+
+low.panelfun <- function(x,y,clust=cl$cluster,...){
+  # this plots the main pairs plot
+  up.panelfun(x,y,clust)
+
+  # this finds the appropriate column the panel is related
+  # to and plots the centroids.
+  xi=which(length(x)==apply(x.mat, 2, function(v){sum(v==x)}))
+  yi=which(length(y)==apply(x.mat, 2, function(v){sum(v==y)}))
+  points(cl$centers[xi,],cl$centers[yi,], col = 1:5, pch = 8, cex = 2)
+}
+pairs(x.mat, col = cl$cluster
+      ,lower.panel=low.panelfun
+      ,upper.panel=up.panelfun
+)
+
+
+pairs(x.mat, col = cl$cluster
+      ,lower.panel=low.panelfun
+      ,upper.panel=up.panelfun
+)
+
 # plot centers
+pairs(jitter(x), col=km$cluster)
+
+pairs(jitter(x), col = cl$cluster)
+
 points(km$centers, col = 1:2, pch = 8)
 
 

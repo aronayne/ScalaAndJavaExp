@@ -27,6 +27,16 @@ public class JavaVariance {
 		listC.add(new Double(10.0));
 		listB = (List) listC;
 		System.out.println(listB.get(0));
+
+	}
+	
+	private static void part2(){
+		
+		Object[] arrayA = { new Object () };
+		String[] arrayB = arrayA;
+		
+		List<String> listB = new ArrayList<String>();
+		List<Object> listA = listB;
 		
 	}
 
