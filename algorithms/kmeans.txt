@@ -234,7 +234,9 @@ km <- kmeans(x, 8, 5)
 # print components of km
 print(km)
 # plot clusters
-plot(x, col = km$cluster)
+#plot(x, col = km$cluster)
+
+pairs(jitter(x), col = cl$cluster)
 
 x.mat=x
 
@@ -266,9 +268,12 @@ pairs(x.mat, col = cl$cluster
 )
 
 # plot centers
-pairs(jitter(x), col=km$cluster)
+pairs(x, col=km$cluster)
+
 
 pairs(jitter(x), col = cl$cluster)
+
+
 
 points(km$centers, col = 1:2, pch = 8)
 
@@ -310,3 +315,90 @@ plot(x, col = cl$cluster)
 points(cl$centers, col = 1:5, pch = 8, cex = 2)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cells = c(1,1,1,0
+          1,0,1,1,
+          1,0,1,1,
+          1,0,0,1,
+          1,1,1,0,
+          0,1,0,1,
+          0,1,1,0,
+          1,1,0,1,
+          0,0,1,1,
+          0,0,0,0,
+          1,1,1,0,
+          1,1,0,1,
+          1,0,1,1,
+          1,1,0,0,
+          1,0,1,0,
+          1,1,0,0,
+          1,0,1,1,
+          1,1,0,1,
+          1,0,1,1,
+          1,1,0,0,
+          1,0,1,1,
+          1,1,0,0,
+          1,0,1,1,
+          1,1,0,0)
+rnames = c("a1","a2","a3","a4","a5","a6","a7","a8","a9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24")
+cnames = c("google","stackoverflow","statistics","stackexchange")
+x <- matrix(cells, nrow=24, ncol=4, byrow=TRUE, dimnames=list(rnames, cnames))
+# run K-Means
+km <- kmeans(x, 3, 5)
+# print components of km
+print(km)
+# plot clusters
+
+pairs(x, col = km$cluster)
+
+
+
+plot(x, col = km$cluster)
+
+
+# plot centers
+pairs(jitter(x), col = cl$cluster)
