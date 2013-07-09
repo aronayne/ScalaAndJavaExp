@@ -1,8 +1,10 @@
 package variance
 
 /**
-Based on http://oldfashionedsoftware.com/2008/08/26/variance-basics-in-java-and-scala/
-**/
+* Based on 
+*
+* http://oldfashionedsoftware.com/2008/08/26/variance-basics-in-java-and-scala/
+ **/
 
 object ScalaVariance {
 
@@ -20,5 +22,6 @@ object ScalaVariance {
                                                   //> test2  : variance.ScalaVariance.CoVar[String] = CoVar
 	val test3: ContraVar[String] = new ContraVar[String]
                                                   //> test3  : variance.ScalaVariance.ContraVar[String] = ContraVar
+  val test1: InVar[String] = new InVar[AnyRef]
 	
 }
