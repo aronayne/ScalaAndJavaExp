@@ -360,7 +360,7 @@ points(cl$centers, col = 1:5, pch = 8, cex = 2)
 
 
 
-cells = c(1,1,1,0
+cells = c(1,1,1,0,
           1,0,1,1,
           1,0,1,1,
           1,0,0,1,
