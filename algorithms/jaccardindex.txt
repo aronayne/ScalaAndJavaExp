@@ -1,0 +1,37 @@
+Jaccard index
+Use online calculator : http://people.revoledu.com/kardi/tutorial/Similarity/Jaccard.html for similarity
+
+
+
+
+
+cells = c(1,1,1,0,
+          1,0,1,1,
+          1,0,1,1,
+          1,0,0,1)
+rnames = c("a1","a2","a3","a4")
+cnames = c("google","stackoverflow","statistics","stackexchange")
+x <- matrix(cells, nrow=24, ncol=4, byrow=TRUE, dimnames=list(rnames, cnames))
+# run K-Means
+km <- kmeans(x, 3, 5)
+# print components of km
+print(km)
+# plot clusters
+pairs(x, col = km$cluster)
+
+
+
+1,1,1,0, -> a1
+1,0,1,1, -> a2
+1,0,1,1, -> a3
+1,0,0,1 -> a4
+
+     a1     a2     a3     a4
+a1   0      .5     .5     .75
+a2   .5
+a3
+a4
+
+
+
+
