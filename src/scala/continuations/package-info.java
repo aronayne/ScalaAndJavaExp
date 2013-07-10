@@ -5,4 +5,4 @@
  * @author a511381
  *
  */
-package continuations;
+package scala.continuations;

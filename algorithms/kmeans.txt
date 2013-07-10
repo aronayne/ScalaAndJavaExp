@@ -402,3 +402,29 @@ plot(x, col = km$cluster)
 
 # plot centers
 pairs(jitter(x), col = cl$cluster)
+
+
+
+
+
+
+
+
+
+cells = c(1,2,1,
+          1,2,3,
+          1,2,0,
+          1,0,1,
+          1,1,0,
+          0,3,1,
+          0,1,0,
+          1,0,1)
+rnames = c("a1","a2","a3","a4","a5","a6","a7","a8")
+cnames = c("google","stackoverflow","statistics")
+x <- matrix(cells, nrow=3, ncol=3, byrow=TRUE, dimnames=list(rnames, cnames))
+# run K-Means
+km <- kmeans(x, 3, 5)
+# print components of km
+print(km)
+# plot clusters
+pairs(x, col = km$cluster)
