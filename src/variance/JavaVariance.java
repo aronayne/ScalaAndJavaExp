@@ -36,10 +36,13 @@ public class JavaVariance {
 	private static void part2(){
 		
 		Object[] arrayA = { new Object () };
-		String[] arrayB = arrayA;
 		
+		//Does not compile
+		//String[] arrayB = arrayA;
+		
+		//Does not compile
 		List<String> listB = new ArrayList<String>();
-		List<Object> listA = listB;
+		//List<Object> listA = listB;
 		
 	}
 
