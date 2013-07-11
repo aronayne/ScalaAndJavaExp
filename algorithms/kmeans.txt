@@ -392,7 +392,6 @@ km <- kmeans(x, 3, 5)
 # print components of km
 print(km)
 # plot clusters
-
 pairs(x, col = km$cluster)
 
 

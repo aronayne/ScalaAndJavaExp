@@ -1,6 +1,5 @@
 Jaccard index
-Use online calculator : http://people.revoledu.com/kardi/tutorial/Similarity/Jaccard.html for similarity
-
+Use online calculator : http://people.revoledu.com/kardi/tutorial/Similarity/Jaccard.html
 
 
 
@@ -26,11 +25,16 @@ pairs(x, col = km$cluster)
 1,0,1,1, -> a3
 1,0,0,1 -> a4
 
-     a1     a2     a3     a4
-a1   0      .5     .5     .75
-a2   .5
-a3
-a4
+require cluster
+library(cluster)
+# run AGNES
+ag <- agnes (similarity.matrix,  metric="manhattan", method ="single")
+ 
+# print components of ag
+print(ag)
+
+# plot clusters
+plot(ag, ask = FALSE, which.plots = NULL)
 
 
 
