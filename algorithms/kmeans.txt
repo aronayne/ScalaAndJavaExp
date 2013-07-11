@@ -427,3 +427,50 @@ km <- kmeans(x, 3, 5)
 print(km)
 # plot clusters
 pairs(x, col = km$cluster)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cells = c(1,1,1,
+          1,1,1,
+          1,0,1,
+          1,0,0,
+          1,1,1,
+          0,1,0,
+          0,1,1,
+          1,1,0,
+          0,0,1,
+          0,0,0,
+          1,1,1,
+          1,1,0,
+          1,0,1,
+          1,1,0,
+          1,0,1,
+          1,1,0
+)
+rnames = c("a1","a2","a3","a4","a5","a6","a7","a8","a9","10","11","12","13","14","15","16")
+cnames = c("google","stackoverflow","statistics")
+x <- matrix(cells, nrow=3, ncol=16, byrow=TRUE, dimnames=list(cnames, rnames))
+# run K-Means
+km <- kmeans(x, 1, 5)
+# print components of km
+print(km)
+# plot clusters
+pairs(x, col = km$cluster)
+
